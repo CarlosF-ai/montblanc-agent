@@ -1,74 +1,61 @@
 from playwright.sync_api import sync_playwright
 import pandas as pd
 from datetime import datetime
+from scorer import score_offer
 
 SITES = [
-    {
-        "name": "VVF",
-        "search_url": "https://www.vvf-villages.fr/recherche-sejour"
-    },
-    {
-        "name": "VTF",
-        "search_url": "https://www.vtf-vacances.com/sejours"
-    }
+    {"name": "VVF", "url": "https://www.vvf-villages.fr"},
+    {"name": "VTF", "url": "https://www.vtf-vacances.com"},
+    {"name": "Miléade", "url": "https://www.mileade.com"},
 ]
 
-DESTINATION = "mont blanc"
-START_DATE = "11/07/2026"
-END_DATE = "18/07/2026"
-
-ADULTS = 3
-CHILDREN = 1
+KEYWORDS = ["mont", "chamonix", "haute-savoie"]
 
 results = []
 
+def extract_price(text):
+
+    numbers = []
+
+    for w in text.split():
+        w = w.replace("€", "").replace(",", "")
+        if w.isdigit():
+            v = int(w)
+            if 100 < v < 6000:
+                numbers.append(v)
+
+    return min(numbers) if numbers else None
+
+
 with sync_playwright() as p:
+
     browser = p.chromium.launch(headless=True)
     page = browser.new_page()
 
-    for site in SITES:
+    for s in SITES:
 
         try:
-            print(f"Recherche sur {site['name']}")
-
-            page.goto(site["search_url"], timeout=60000)
-
-            # ⚠️ Les sélecteurs varient selon les sites
-            # Ici on tente une logique générique
-
+            page.goto(s["url"], timeout=60000)
             page.wait_for_timeout(3000)
 
-            content = page.content().lower()
+            text = page.content().lower()
 
-            if "mont" in content or "chamonix" in content:
+            location_match = any(k in text for k in KEYWORDS)
 
-                links = page.locator("a").all()
+            price = extract_price(page.inner_text("body"))
 
-                for link in links:
+            has_pension = "pension" in text
 
-                    try:
-                        text = link.inner_text()
-                        href = link.get_attribute("href")
+            offer_score = score_offer(price, has_pension, location_match)
 
-                        if not href:
-                            continue
-
-                        if "séjour" in text.lower() or "vacances" in text.lower():
-
-                            if href.startswith("/"):
-                                href = site["search_url"] + href
-
-                            results.append({
-                                "site": site["name"],
-                                "titre": text[:80],
-                                "url": href,
-                                "periode": f"{START_DATE} → {END_DATE}",
-                                "personnes": f"{ADULTS}A + {CHILDREN}E",
-                                "date_scan": datetime.now().strftime("%Y-%m-%d %H:%M")
-                            })
-
-                    except:
-                        pass
+            results.append({
+                "site": s["name"],
+                "url": s["url"],
+                "price": price if price else "N/A",
+                "pension": has_pension,
+                "score": offer_score,
+                "date": datetime.now().strftime("%Y-%m-%d %H:%M")
+            })
 
         except Exception as e:
             print(e)
@@ -77,6 +64,6 @@ with sync_playwright() as p:
 
 df = pd.DataFrame(results)
 
-df.to_csv("offres.csv", index=False)
+df.to_csv("offers.csv", index=False)
 
 print(df)
