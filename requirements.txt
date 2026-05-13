@@ -1,4 +1,2 @@
 playwright
 pandas
-beautifulsoup4
-lxml
