@@ -1,4 +1,4 @@
-name: MontBlanc Ultra Agent
+name: Booking AI PRO
 
 on:
   workflow_dispatch:
@@ -19,18 +19,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install
-        run: |
+      - run: |
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
-      - name: Run agent
-        run: python agent.py
+      - run: python agent.py
 
-      - name: Save results
+      - name: commit
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add offres.csv
-          git commit -m "update offers" || exit 0
+          git add offers.csv
+          git commit -m "update" || exit 0
           git push
