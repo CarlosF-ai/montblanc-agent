@@ -1,4 +1,4 @@
-name: MontBlanc Dashboard
+name: MontBlanc Ultra Agent
 
 on:
   workflow_dispatch:
@@ -6,12 +6,11 @@ on:
     - cron: '0 6 * * *'
 
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
 
-    # 👉 Fix Node.js deprecation warning GitHub Actions
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -20,16 +19,18 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: |
+      - name: Install
+        run: |
           pip install -r requirements.txt
-          playwright install chromium
+          playwright install --with-deps chromium
 
-      - run: python agent.py
+      - name: Run agent
+        run: python agent.py
 
-      - name: Commit data
+      - name: Save results
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add offres.csv
-          git commit -m "update data" || exit 0
+          git commit -m "update offers" || exit 0
           git push
