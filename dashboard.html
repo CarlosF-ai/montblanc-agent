@@ -1,85 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard Mont-Blanc</title>
+<meta charset="UTF-8">
+<title>🏔️ Booking AI PRO</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 30px;
-      background: #f5f5f5;
-    }
+<style>
+body {
+  font-family: Arial;
+  background:#f4f6f9;
+  margin:30px;
+}
 
-    h1 {
-      color: #1a3d5c;
-    }
+.card {
+  background:white;
+  padding:15px;
+  margin:10px 0;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      background: white;
-    }
+.good { border-left:6px solid green; }
+.mid { border-left:6px solid orange; }
+.bad { border-left:6px solid red; }
 
-    th, td {
-      padding: 12px;
-      border: 1px solid #ddd;
-      text-align: center;
-    }
-
-    th {
-      background: #1a3d5c;
-      color: white;
-    }
-
-    .good {
-      background: #d4edda;
-    }
-  </style>
+h1 { color:#1a3d5c; }
+</style>
 </head>
 
 <body>
 
-<h1>🏔️ Dashboard Mont-Blanc - Prix vacances</h1>
+<h1>🏔️ Booking AI PRO — Mont-Blanc</h1>
 
-<table id="table">
-  <thead>
-    <tr>
-      <th>Site</th>
-      <th>Prix (€)</th>
-      <th>Date</th>
-      <th>Score</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<div id="list"></div>
 
 <script>
-fetch('offres.csv')
+fetch("offers.csv")
 .then(r => r.text())
-.then(text => {
+.then(data => {
 
-  const rows = text.trim().split("\n").slice(1);
+  const rows = data.trim().split("\n").slice(1);
 
-  const tbody = document.querySelector("tbody");
+  const container = document.getElementById("list");
 
   rows.forEach(r => {
-    const cols = r.split(",");
 
-    const prix = parseInt(cols[1]);
+    const c = r.split(",");
 
-    const tr = document.createElement("tr");
+    const score = c[3];
 
-    if (prix < 2000) tr.classList.add("good");
+    let cls = "bad";
+    if (score.includes("EXCELLENTE")) cls = "good";
+    else if (score.includes("BONNE")) cls = "mid";
 
-    tr.innerHTML = `
-      <td>${cols[0]}</td>
-      <td>${cols[1]}</td>
-      <td>${cols[2]}</td>
-      <td>${prix < 2000 ? "⭐⭐⭐" : "⭐⭐"}</td>
+    const div = document.createElement("div");
+    div.className = "card " + cls;
+
+    div.innerHTML = `
+      <h3>${c[0]}</h3>
+      <p>💰 Prix: ${c[2]}</p>
+      <p>🍽️ Pension: ${c[3]}</p>
+      <p>⭐ Score: ${c[3]}</p>
+      <a href="${c[1]}" target="_blank">Voir l'offre</a>
     `;
 
-    tbody.appendChild(tr);
+    container.appendChild(div);
   });
 
 });
