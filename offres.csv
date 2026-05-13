@@ -1,2 +1,232 @@
-site,prix,date
-VTF,123,2026-05-13 13:48
+site,titre,url,periode,personnes,date_scan
+VTF,"
+                                            Date vacances scolaires 2026
+      ",https://www.vtf-vacances.com/sejours/fr_FR/dates-des-vacances-scolaires,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Vacances de la Toussaint : idées de",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-la-toussaint,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Vacances de Noël : Séjours tout com",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-noel,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Vacances de février : séjours ennei",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-fevrier,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Vacances de Pâques : séjours de rêv",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-paques,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Vos vacances d’été avec VTF : parte",https://www.vtf-vacances.com/sejours/fr_FR/vacances-d-ete,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Partir en vacances avec VTF
+       ",https://www.vtf-vacances.com/sejours/fr_FR/partir-en-vacances-avec-vtf,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Préparer mon séjour
+               ",https://www.vtf-vacances.com/sejours/fr_FR/partir-en-vacances-avec-vtf/preparer-mes-vacances,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Durée de séjour
+                   ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-a-la-carte,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Les villages vacances VTF
+         ",https://www.vtf-vacances.com/sejours/fr_FR/decouvrir-villages-vacances-vtf,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                            Aides aux vacances
+                ",https://www.vtf-vacances.com/sejours/fr_FR/aides-aux-vacances,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Nouvelle ",https://www.vtf-vacances.com/sejours/fr_FR/region/nouvelle-aquitaine,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Bretagne
+",https://www.vtf-vacances.com/sejours/fr_FR/region/bretagne,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Normandie",https://www.vtf-vacances.com/sejours/fr_FR/region/normandie,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Occitanie",https://www.vtf-vacances.com/sejours/fr_FR/region/occitanie?search_etab_listing%5Benvironments%5D%5B%5D=MER&search_etab_listing%5Bcountries%5D%5B%5D=FR,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances PACA
+    ",https://www.vtf-vacances.com/sejours/fr_FR/region/provence-alpes-cote-d-azur?search_etab_listing%5Benvironments%5D%5B%5D=MER&search_etab_listing%5Bcountries%5D%5B%5D=FR,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Var
+     ",https://www.vtf-vacances.com/sejours/fr_FR/region/provence-alpes-cote-d-azur/var,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Haute-Sav",https://www.vtf-vacances.com/sejours/fr_FR/region/auvergne-rhone-alpes/haute-savoie,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Savoie
+  ",https://www.vtf-vacances.com/sejours/fr_FR/region/auvergne-rhone-alpes/savoie,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Isère
+   ",https://www.vtf-vacances.com/sejours/fr_FR/region/auvergne-rhone-alpes/isere,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Puy-de-Dô",https://www.vtf-vacances.com/sejours/fr_FR/region/auvergne-rhone-alpes/puy-de-dome,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Hautes Al",https://www.vtf-vacances.com/sejours/fr_FR/region/provence-alpes-cote-d-azur/hautes-alpes,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Doubs
+   ",https://www.vtf-vacances.com/sejours/fr_FR/region/bourgogne-franche-comte/doubs,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Haut-Rhin",https://www.vtf-vacances.com/sejours/fr_FR/region/grand-est/haut-rhin,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Drôme
+   ",https://www.vtf-vacances.com/sejours/fr_FR/region/auvergne-rhone-alpes/drome,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Pyrénées ",https://www.vtf-vacances.com/sejours/fr_FR/region/occitanie/pyrenees-orientales,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Vaucluse
+",https://www.vtf-vacances.com/sejours/fr_FR/region/provence-alpes-cote-d-azur/vaucluse,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Dordogne
+",https://www.vtf-vacances.com/sejours/fr_FR/region/nouvelle-aquitaine/dordogne,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Occitanie",https://www.vtf-vacances.com/sejours/fr_FR/region/occitanie,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    Villages vacances Lozère
+  ",https://www.vtf-vacances.com/sejours/fr_FR/region/occitanie/lozere,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                    En savoir + sur les vacance",https://www.vtf-vacances.com/sejours/fr_FR/destinations/etranger,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+        Tout sur les vacances en famille
+        ",https://www.vtf-vacances.com/sejours/fr_FR/themes/famille,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjours famille ave",https://www.vtf-vacances.com/sejours/fr_FR/sejours-famille-vacances-avec-bebe,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Avec bébé en villag",https://blog.vtf-vacances.com/france/voyager-en-famille-avec-un-bebe-dans-un-village-de-vacances/,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur les vacanc",https://www.vtf-vacances.com/sejours/fr_FR/vacances-avec-bebe,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances familiales",https://www.vtf-vacances.com/sejours/fr_FR/themes/vacances-en-famille,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Planifiez vos vacan",https://www.vtf-vacances.com/sejours/fr_FR/dates-des-vacances-scolaires,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances avec un ad",https://blog.vtf-vacances.com/inspiration/vacances-avec-un-ado/,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur les vacanc",https://www.vtf-vacances.com/sejours/fr_FR/enfants-et-ados,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjours famille nom",https://www.vtf-vacances.com/sejours/fr_FR/sejours-famille-vacances-famille-nombreuse,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Questions aides aux",https://www.vtf-vacances.com/sejours/fr_FR/foire-aux-questions#aide,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur les vacanc",https://www.vtf-vacances.com/sejours/fr_FR/famille-nombreuse,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjours grands-pare",https://www.vtf-vacances.com/sejours/fr_FR/sejours-famille-grands-parents-petits-enfants,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjours hors saison",https://www.vtf-vacances.com/sejours/fr_FR/sejours-hors-saison,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur les vacanc",https://www.vtf-vacances.com/sejours/fr_FR/sejours-famille-grands-parents,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjours famille mon",https://www.vtf-vacances.com/sejours/fr_FR/sejours-vacances-famille-monoparentale,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur les vacanc",https://www.vtf-vacances.com/sejours/fr_FR/famille-monoparentale,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                Tout sur les vacances en famill",https://www.vtf-vacances.com/sejours/fr_FR/themes/famille,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances tout compr",https://www.vtf-vacances.com/sejours/fr_FR/vacances-famille-all-inclusive,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances sans voitu",https://www.vtf-vacances.com/sejours/fr_FR/themes/famille/vacances-sans-voiture,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjours à la carte ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-a-la-carte,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Week-ends & Courts ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-courts-sejours-a-la-neige,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur les week-e",https://www.vtf-vacances.com/sejours/fr_FR/week-ends-sejours,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Guide vacances en l",https://blog.vtf-vacances.com/inspiration/pouvoir-vacances-location/,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Les vacances de la ",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-la-toussaint,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Les vacances de Noë",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-noel,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Les vacances de fév",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-fevrier,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Les vacances de Pâq",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-paques,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances d'été
+    ",https://www.vtf-vacances.com/sejours/fr_FR/vacances-d-ete,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Dates des vacances ",https://www.vtf-vacances.com/sejours/fr_FR/dates-des-vacances-scolaires,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur les vacanc",https://www.vtf-vacances.com/sejours/fr_FR/formules-vacances-scolaires,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Aides aux vacances
+",https://www.vtf-vacances.com/sejours/fr_FR/aides-aux-vacances,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+        Nos activités vacances
+        ",https://www.vtf-vacances.com/sejours/fr_FR/activites,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour détente et b",https://www.vtf-vacances.com/sejours/fr_FR/sejours-detente-et-bien-etre,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour sports nauti",https://www.vtf-vacances.com/sejours/fr_FR/sejours-sports-nautiques,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour cyclotourism",https://www.vtf-vacances.com/sejours/fr_FR/sejours-cyclotourisme,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour golf
+       ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-golf,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour multi-neige
+",https://www.vtf-vacances.com/sejours/fr_FR/sejours-multi-activites-a-la-neige,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour raquette à n",https://www.vtf-vacances.com/sejours/fr_FR/sejours-rando-raquettes,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour ski de fond
+",https://www.vtf-vacances.com/sejours/fr_FR/sejours-ski-de-fond,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances pied des p",https://www.vtf-vacances.com/sejours/fr_FR/sejours-vacances-pied-des-pistes,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances au ski tou",https://www.vtf-vacances.com/sejours/fr_FR/themes/ski-vacances-au-ski,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances bord de me",https://www.vtf-vacances.com/sejours/fr_FR/sejours-vacances-bord-de-mer,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjour randonnée
+  ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-randonnee,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Séjours cure & déte",https://www.vtf-vacances.com/sejours/fr_FR/sejours-detente-et-bien-etre,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances hors saiso",https://www.vtf-vacances.com/sejours/fr_FR/sejours-hors-saison,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Villages vacances s",https://www.vtf-vacances.com/sejours/fr_FR/themes/ski-vacances-au-ski,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Villages vacances f",https://www.vtf-vacances.com/sejours/fr_FR/themes/famille,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Nos séjours à thème",https://www.vtf-vacances.com/sejours/fr_FR/themes,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Tout sur nos séjour",https://www.vtf-vacances.com/sejours/fr_FR/themes/astronomie-afa,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances de Noël
+  ",https://www.vtf-vacances.com/sejours/fr_FR/vacances-de-noel,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                Nos activités vacances
+        ",https://www.vtf-vacances.com/sejours/fr_FR/activites,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Avis village vacanc",https://www.vtf-vacances.com/sejours/fr_FR/avis-village-vacances,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances avec pisci",https://www.vtf-vacances.com/sejours/fr_FR/vacances-avec-piscine,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances avec pisci",https://www.vtf-vacances.com/sejours/fr_FR/vacances-avec-piscine-couverte,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Vacances avec espac",https://www.vtf-vacances.com/sejours/fr_FR/vacances-avec-espace-forme,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                                                            Partir en vacances ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-avec-animal,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,groupes.vtf-vacances.com,https://www.vtf-vacances.com/sejours//groupes.vtf-vacances.com,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,groupes.vtf-vacances.com,https://www.vtf-vacances.com/sejours//groupes.vtf-vacances.com,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"ETÉ
+Séjour en Occitanie
+
+Situé entre les plages de la Méditerranée et l'étang de",https://www.vtf-vacances.com/sejours/fr_FR/summer/village-vacances/herault/agde/le-domaine-d-agde,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"ETÉ
+Séjour cyclotourisme
+
+Les Bonnes Adresses cyclo",https://www.vtf-vacances.com/sejours/fr_FR/sejours-cyclotourisme,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                            
+                    
+                
+            ",https://www.vtf-vacances.com/sejours/fr_FR/summer/village-vacances/herault/agde/le-domaine-d-agde,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                            
+                    
+                
+            ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-cyclotourisme,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"
+                            
+                    
+                
+            ",https://www.vtf-vacances.com/sejours/fr_FR/sejours-multi-activites-a-la-neige,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,"Villages Vacances Familles
+
+Tout est pensé à la fois pour les parents mais aussi",https://www.vtf-vacances.com/sejours/fr_FR/themes/famille,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,Nos séjours à l'étranger,https://www.vtf-vacances.com/sejours/fr_FR/destinations/etranger,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,Les villages vacances VTF,https://www.vtf-vacances.com/sejours/fr_FR/decouvrir-villages-vacances-vtf,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
+VTF,Préparer mes vacances,https://www.vtf-vacances.com/sejours/fr_FR/partir-en-vacances-avec-vtf/preparer-mes-vacances,11/07/2026 → 18/07/2026,3A + 1E,2026-05-13 13:56
