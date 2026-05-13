@@ -1,60 +1,82 @@
 from playwright.sync_api import sync_playwright
 import pandas as pd
 from datetime import datetime
-import os
 
 SITES = [
-    {"name": "VVF", "url": "https://www.vvf-villages.fr"},
-    {"name": "VTF", "url": "https://www.vtf-vacances.com"},
-    {"name": "Miléade", "url": "https://www.mileade.com"},
+    {
+        "name": "VVF",
+        "search_url": "https://www.vvf-villages.fr/recherche-sejour"
+    },
+    {
+        "name": "VTF",
+        "search_url": "https://www.vtf-vacances.com/sejours"
+    }
 ]
 
-KEYWORDS = ["mont blanc", "chamonix", "pension"]
+DESTINATION = "mont blanc"
+START_DATE = "11/07/2026"
+END_DATE = "18/07/2026"
 
-data = []
+ADULTS = 3
+CHILDREN = 1
+
+results = []
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)
     page = browser.new_page()
 
-    for s in SITES:
+    for site in SITES:
+
         try:
-            page.goto(s["url"], timeout=60000)
-            text = page.content().lower()
+            print(f"Recherche sur {site['name']}")
 
-            if any(k in text for k in KEYWORDS):
+            page.goto(site["search_url"], timeout=60000)
 
-                prices = []
+            # ⚠️ Les sélecteurs varient selon les sites
+            # Ici on tente une logique générique
 
-                for t in page.inner_text("body").split():
-                    clean = t.replace("€", "").replace(",", "")
-                    if clean.isdigit():
-                        v = int(clean)
-                        if 100 < v < 5000:
-                            prices.append(v)
+            page.wait_for_timeout(3000)
 
-                if prices:
-                    data.append({
-                        "site": s["name"],
-                        "prix": min(prices),
-                        "date": datetime.now().strftime("%Y-%m-%d %H:%M")
-                    })
+            content = page.content().lower()
 
-        except:
-            pass
+            if "mont" in content or "chamonix" in content:
+
+                links = page.locator("a").all()
+
+                for link in links:
+
+                    try:
+                        text = link.inner_text()
+                        href = link.get_attribute("href")
+
+                        if not href:
+                            continue
+
+                        if "séjour" in text.lower() or "vacances" in text.lower():
+
+                            if href.startswith("/"):
+                                href = site["search_url"] + href
+
+                            results.append({
+                                "site": site["name"],
+                                "titre": text[:80],
+                                "url": href,
+                                "periode": f"{START_DATE} → {END_DATE}",
+                                "personnes": f"{ADULTS}A + {CHILDREN}E",
+                                "date_scan": datetime.now().strftime("%Y-%m-%d %H:%M")
+                            })
+
+                    except:
+                        pass
+
+        except Exception as e:
+            print(e)
 
     browser.close()
 
-df_new = pd.DataFrame(data)
+df = pd.DataFrame(results)
 
-file = "offres.csv"
-
-if os.path.exists(file):
-    df_old = pd.read_csv(file)
-    df = pd.concat([df_old, df_new], ignore_index=True)
-else:
-    df = df_new
-
-df.to_csv(file, index=False)
+df.to_csv("offres.csv", index=False)
 
 print(df)
