@@ -1,166 +1,60 @@
 from playwright.sync_api import sync_playwright
 import pandas as pd
 from datetime import datetime
-import smtplib
-from email.mime.text import MIMEText
 import os
 
-SEARCH_URLS = [
-    {
-        "name": "VVF",
-        "url": "https://www.vvf-villages.fr"
-    },
-    {
-        "name": "VTF",
-        "url": "https://www.vtf-vacances.com"
-    },
-    {
-        "name": "Miléade",
-        "url": "https://www.mileade.com"
-    }
+SITES = [
+    {"name": "VVF", "url": "https://www.vvf-villages.fr"},
+    {"name": "VTF", "url": "https://www.vtf-vacances.com"},
+    {"name": "Miléade", "url": "https://www.mileade.com"},
 ]
 
-KEYWORDS = [
-    "mont blanc",
-    "chamonix",
-    "pension complète",
-    "pension complete"
-]
+KEYWORDS = ["mont blanc", "chamonix", "pension"]
 
-MAX_PRICE = 2500
-
-results = []
-
-def send_email(content):
-
-    sender = os.environ["EMAIL_USER"]
-    password = os.environ["EMAIL_PASSWORD"]
-    receiver = os.environ["EMAIL_TO"]
-
-    msg = MIMEText(content)
-
-    msg["Subject"] = "🏔️ Nouvelle promo Mont-Blanc"
-    msg["From"] = sender
-    msg["To"] = receiver
-
-    smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-
-    smtp.login(sender, password)
-
-    smtp.send_message(msg)
-
-    smtp.quit()
+data = []
 
 with sync_playwright() as p:
-
     browser = p.chromium.launch(headless=True)
-
     page = browser.new_page()
 
-    for site in SEARCH_URLS:
-
+    for s in SITES:
         try:
+            page.goto(s["url"], timeout=60000)
+            text = page.content().lower()
 
-            print(f"Analyse {site['name']}")
-
-            page.goto(site["url"], timeout=60000)
-
-            content = page.content().lower()
-
-            matched = False
-
-            for keyword in KEYWORDS:
-                if keyword in content:
-                    matched = True
-
-            if matched:
+            if any(k in text for k in KEYWORDS):
 
                 prices = []
 
-                text = page.locator("body").inner_text()
-
-                words = text.split()
-
-                for word in words:
-
-                    clean = (
-                        word.replace("€", "")
-                        .replace(",", "")
-                        .replace(".", "")
-                    )
-
+                for t in page.inner_text("body").split():
+                    clean = t.replace("€", "").replace(",", "")
                     if clean.isdigit():
-
-                        value = int(clean)
-
-                        if 100 < value < 5000:
-                            prices.append(value)
+                        v = int(clean)
+                        if 100 < v < 5000:
+                            prices.append(v)
 
                 if prices:
-
-                    best_price = min(prices)
-
-                    score = "⭐"
-
-                    if best_price < 2000:
-                        score = "⭐⭐⭐"
-                    elif best_price < 2300:
-                        score = "⭐⭐"
-
-                    results.append({
-                        "site": site["name"],
-                        "url": site["url"],
-                        "prix": best_price,
-                        "score": score,
-                        "date": datetime.now().strftime("%d/%m/%Y %H:%M")
+                    data.append({
+                        "site": s["name"],
+                        "prix": min(prices),
+                        "date": datetime.now().strftime("%Y-%m-%d %H:%M")
                     })
 
-                    page.screenshot(
-                        path=f"{site['name']}.png",
-                        full_page=True
-                    )
-
-        except Exception as e:
-            print(e)
+        except:
+            pass
 
     browser.close()
 
-if results:
+df_new = pd.DataFrame(data)
 
-    df = pd.DataFrame(results)
+file = "offres.csv"
 
-    df.to_csv(
-        "offres.csv",
-        mode="a",
-        index=False,
-        header=not os.path.exists("offres.csv")
-    )
-
-    good_deals = df[df["prix"] <= MAX_PRICE]
-
-    if not good_deals.empty:
-
-        message = f"""
-
-Promotions détectées :
-
-{good_deals.to_string(index=False)}
-
-Critères :
-- Mont-Blanc
-- Pension complète
-- 3 adultes
-- 1 adolescent 15 ans
-- 11 → 18 juillet
-
-"""
-
-        send_email(message)
-
-        print("Email envoyé")
-
-    else:
-        print("Aucune bonne affaire")
-
+if os.path.exists(file):
+    df_old = pd.read_csv(file)
+    df = pd.concat([df_old, df_new], ignore_index=True)
 else:
-    print("Aucun résultat")
+    df = df_new
+
+df.to_csv(file, index=False)
+
+print(df)
