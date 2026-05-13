@@ -1,23 +1,24 @@
 name: Agent MontBlanc PRO
 
 on:
-
   workflow_dispatch:
-
   schedule:
     - cron: '0 6 * * *'
 
 jobs:
-
   run-agent:
-
     runs-on: ubuntu-latest
 
+    # 👉 Fix Node.js 24 warning GitHub Actions
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
