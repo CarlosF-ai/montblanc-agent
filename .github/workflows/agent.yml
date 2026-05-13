@@ -8,9 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # 👉 Fix Node.js 24 warning GitHub Actions
+
+    # 👉 Fix Node.js deprecation warning GitHub Actions
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - uses: actions/checkout@v4
 
