@@ -1,4 +1,4 @@
-name: Agent MontBlanc PRO
+name: MontBlanc Dashboard
 
 on:
   workflow_dispatch:
@@ -6,36 +6,26 @@ on:
     - cron: '0 6 * * *'
 
 jobs:
-  run-agent:
+  build:
     runs-on: ubuntu-latest
 
-    # 👉 Fix Node.js 24 warning GitHub Actions
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: |
+      - run: |
           pip install -r requirements.txt
           playwright install chromium
 
-      - name: Run agent
-        env:
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: python agent.py
+      - run: python agent.py
 
-      - name: Upload screenshots
-        uses: actions/upload-artifact@v4
-        with:
-          name: screenshots
-          path: "*.png"
+      - name: Commit data
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add offres.csv
+          git commit -m "update data" || exit 0
+          git push
